@@ -1,0 +1,3 @@
+gunicorn==0.14.2
+requests==0.11.1
+pyTelegramBotAPI==5.6
