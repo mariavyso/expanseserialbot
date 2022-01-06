@@ -13,7 +13,7 @@ for matchNum, match in enumerate(matches, start=1):
     for groupNum in range(0, len(match.groups())):
         groupNum = groupNum + 1
 
-token = '5071473434:AAHwt3NGiWwiB_Z_5lEbYGDOa7gSoS7AYfo'
+token = '5071473434:AAFcvbhbgadvtM34eH1LVVTWVLFxV-39DZ4'
 bot = telebot.TeleBot(token)
 
 @bot.message_handler(commands=['start'])
