@@ -21,7 +21,7 @@ def start_message(message):
     bot.send_message(message.chat.id,"Привет ✌️ ")
 
 @bot.message_handler(commands=['answer'])
-def start_message(message):
+def message(message):
     if matchNum > 3:
         bot.send_message(message.chat.id,'Yes, there is a new episode for u!')
     else:
