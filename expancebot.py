@@ -23,8 +23,8 @@ def start_message(message):
 @bot.message_handler(commands=['answer'])
 def start_message(message):
     if matchNum > 3:
-        print ('Yes, there is a new episode for u!')
-        else:
-            print ('Oh,dear! You should wait')
+        bot.send_message(message.chat.id,'Yes, there is a new episode for u!')
+    else:
+        bot.send_message(message.chat.id,'Oh,dear! You should wait')
  
 bot.infinity_polling()
