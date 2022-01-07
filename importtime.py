@@ -24,7 +24,8 @@ def check_soap():
         bot.send_message(1176786225,'I check it and there is a new episode!')
     else:
         bot.send_message(1176786225,'Nothing new')
-    time.sleep(60)
+
 
 while True:
     check_soap()
+    time.sleep(60)
