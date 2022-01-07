@@ -28,4 +28,4 @@ def check_soap():
 
 while True:
     check_soap()
-    time.sleep(60)
+    time.sleep(3600)
