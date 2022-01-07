@@ -18,10 +18,10 @@ def check_soap():
     for matchNum, match in enumerate(matches, start=1):
         for groupNum in range(0, len(match.groups())):
             groupNum = groupNum + 1
-    if matchNum > 3:
+    if matchNum > 4:
         bot.send_message(1176786225,'I check it and there is a new episode!')
     else:
-        bot.send_message(1176786225,'I check it and there is a new episode!')
+        bot.send_message(1176786225,'Nothing new')
     time.sleep(3600)
 
 while True:
