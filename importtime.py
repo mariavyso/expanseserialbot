@@ -8,6 +8,8 @@ import time
 import re
 from telegram.ext import Updater
 
+token = '5071473434:AAFcvbhbgadvtM34eH1LVVTWVLFxV-39DZ4'
+bot = telebot.TeleBot(token)
 
 def check_soap():
     z = requests.get('https://soap4.me/soap/The_Expanse/6/')
