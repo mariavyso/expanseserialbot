@@ -35,13 +35,13 @@ def message(message):
  
 
 def check_soap():
-    if matchNum > a:
+    if matchNum < a:
         bot.send_message(1176786225,'Go watch!')
     else:
         return
     while True:
         check_soap()
-        time.sleep(3600)
+        time.sleep(60)
 
 bot.polling(non_stop=False, timeout = 60)
 
