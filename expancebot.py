@@ -38,4 +38,4 @@ def answer(message):
         bot.send_message(message.chat.id,'Oh,dear! You should wait')
 
 
-bot.polling(non_stop=False, timeout=30)
+bot.polling(non_stop=True, timeout=60)
