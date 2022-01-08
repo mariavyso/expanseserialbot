@@ -3,6 +3,7 @@ import json
 from html.parser import HTMLParser
 import telebot
 import pickle
+import time
 
 z = requests.get('https://soap4.me/soap/The_Expanse/6/')
 z.text
@@ -32,4 +33,16 @@ def message(message):
     else:
         bot.send_message(message.chat.id,'Oh,dear! You should wait')
  
+
+def check_soap():
+    if matchNum > a:
+        bot.send_message(1176786225,'Go watch!')
+    else:
+        return
+    while True:
+        check_soap()
+        time.sleep(36000)
+
 bot.polling(non_stop=False, timeout = 60)
+
+
