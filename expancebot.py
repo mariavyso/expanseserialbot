@@ -32,4 +32,4 @@ def message(message):
     else:
         bot.send_message(message.chat.id,'Oh,dear! You should wait')
  
-bot.infinity_polling()
+bot.polling(non_stop=False, timeout = 60)
