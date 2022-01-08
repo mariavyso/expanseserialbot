@@ -28,18 +28,18 @@ u = Updater('5071473434:AAFcvbhbgadvtM34eH1LVVTWVLFxV-39DZ4', use_context=True)
 j = u.job_queue
 
 
-#@bot.message_handler(commands=['start'])
-#def start(message):
-    #bot.send_message(message.chat.id,"yo ✌️ ")
-#job_minute = j.run_repeating(start, interval=60, first=10)
+@bot.message_handler(commands=['start'])
+def start(message):
+    bot.send_message(message.chat.id,"yo ✌️ ")
+job_minute = j.run_repeating(start, interval=60, first=10)
 
-#@bot.message_handler(commands=['answer'])
-#def answer(message):
-   # if matchNum > a:
-       # bot.send_message(message.chat.id,'Yes, there is a new episode for u!')
-    #else:
-        #bot.send_message(message.chat.id,'Oh,dear! You should wait')
-#job_minute = j.run_repeating(answer, interval=60, first=10)
+@bot.message_handler(commands=['answer'])
+def answer(message):
+    if matchNum > a:
+        bot.send_message(message.chat.id,'Yes, there is a new episode for u!')
+    else:
+        bot.send_message(message.chat.id,'Oh,dear! You should wait')
+
 
 
 
