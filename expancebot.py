@@ -24,14 +24,11 @@ a = pickle.load(open('data.txt', 'rb'))
 
 token = '5071473434:AAFcvbhbgadvtM34eH1LVVTWVLFxV-39DZ4'
 bot = telebot.TeleBot(token)
-u = Updater('5071473434:AAFcvbhbgadvtM34eH1LVVTWVLFxV-39DZ4', use_context=True)
-j = u.job_queue
-
 
 @bot.message_handler(commands=['start'])
 def start(message):
     bot.send_message(message.chat.id,"yo ✌️ ")
-job_minute = j.run_repeating(start, interval=60, first=10)
+
 
 @bot.message_handler(commands=['answer'])
 def answer(message):
@@ -41,11 +38,4 @@ def answer(message):
         bot.send_message(message.chat.id,'Oh,dear! You should wait')
 
 
-
-
-def callback_minute(context: telegram.ext.CallbackContext):
-    if matchNum < a:
-        context.bot.send_message(1176786225,'Go watch!')
-    else:
-        context.bot.send_message(1176786225,'fuck!')
-job_minute = j.run_repeating(callback_minute, interval=60)
+bot.polling(non_stop=False, timeout=30)
