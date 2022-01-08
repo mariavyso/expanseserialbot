@@ -46,5 +46,5 @@ def callback_minute(context: telegram.ext.CallbackContext):
     if matchNum < a:
         context.bot.send_message(1176786225,'Go watch!')
     else:
-        return
+        context.bot.send_message(1176786225,'fuck!')
 job_minute = j.run_repeating(callback_minute, interval=60)
