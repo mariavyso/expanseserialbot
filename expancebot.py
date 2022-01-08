@@ -6,6 +6,7 @@ import pickle
 import time
 import telegram.ext
 from telegram.ext import Updater, Dispatcher, CallbackContext
+import telegram
 
 z = requests.get('https://soap4.me/soap/The_Expanse/6/')
 z.text
