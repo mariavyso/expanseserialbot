@@ -41,7 +41,7 @@ def check_soap():
         return
     while True:
         check_soap()
-        time.sleep(36000)
+        time.sleep(3600)
 
 bot.polling(non_stop=False, timeout = 60)
 
