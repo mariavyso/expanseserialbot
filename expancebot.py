@@ -4,6 +4,8 @@ from html.parser import HTMLParser
 import telebot
 import pickle
 import time
+import telegram.ext
+from telegram.ext import Updater, Dispatcher, CallbackContext
 
 z = requests.get('https://soap4.me/soap/The_Expanse/6/')
 z.text
@@ -21,28 +23,27 @@ a = pickle.load(open('data.txt', 'rb'))
 
 token = '5071473434:AAFcvbhbgadvtM34eH1LVVTWVLFxV-39DZ4'
 bot = telebot.TeleBot(token)
+u = Updater('5071473434:AAFcvbhbgadvtM34eH1LVVTWVLFxV-39DZ4', use_context=True)
+j = u.job_queue
+
 
 @bot.message_handler(commands=['start'])
-def start_message(message):
+def start(message):
     bot.send_message(message.chat.id,"yo ✌️ ")
+job_minute = j.run_repeating(start, interval=60, first=10)
 
 @bot.message_handler(commands=['answer'])
-def message(message):
+def answer(message):
     if matchNum > a:
         bot.send_message(message.chat.id,'Yes, there is a new episode for u!')
     else:
         bot.send_message(message.chat.id,'Oh,dear! You should wait')
- 
+job_minute = j.run_repeating(answer, interval=60, first=10)
 
-def check_soap():
+
+def callback_minute(context: telegram.ext.CallbackContext):
     if matchNum < a:
-        bot.send_message(1176786225,'Go watch!')
+        context.bot.send_message(1176786225,'Go watch!')
     else:
         return
-    while True:
-        check_soap()
-        time.sleep(60)
-
-bot.polling(non_stop=False, timeout = 60)
-
-
+job_minute = j.run_repeating(callback_minute, interval=60)
