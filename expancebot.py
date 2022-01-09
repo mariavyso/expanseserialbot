@@ -51,7 +51,7 @@ def answer(message):
 
 
 def check():
-    if matchNum > oldnum:
+    if str(b) > oldnum:
         bot.send_message(1176786225,'Go!')
     else:
         return
@@ -63,10 +63,13 @@ while True:
     oldtime = timedelta(hours=e.hour, minutes=e.minute, seconds=e.second)
     t2 = datetime.now()
     newtime = timedelta(hours=t2.hour, minutes=t2.minute, seconds=t2.second)
-    if newtime - oldtime > timedelta(minutes=2):
+    delta = timedelta(minutes=2)
+    if newtime - oldtime > delta:
         check()
     else:
-        time.sleep(10)
+        time.sleep(2)
+
+    
     
 
 
