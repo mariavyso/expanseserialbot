@@ -2,3 +2,4 @@ gunicorn
 requests
 pyTelegramBotAPI
 python-telegram-bot
+pymongo
