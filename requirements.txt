@@ -2,5 +2,5 @@ gunicorn
 requests
 pyTelegramBotAPI
 python-telegram-bot
-pymongo
+pymongo[tls,srv]
 validators
