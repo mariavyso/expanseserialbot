@@ -15,6 +15,7 @@ import re
 TOKEN = '5071473434:AAFZPmdZpIDWnIguEzdYsqIdzlC8Py3sIZU'
 bot = telebot.TeleBot(TOKEN)
 CLIENT = pymongo.MongoClient(
+    #it is demo project, so this password leads to not-production database, I understand that it is not secure, but here it is to simplify deploy
     "mongodb+srv://mashavyso:Fdert457nDSWEM@cluster0.qyggr.mongodb.net/bot?retryWrites=true&w=majority",
     tlsCAFile=certifi.where()
 )
@@ -190,7 +191,7 @@ def main():
             
         last_check_at = datetime.datetime.now()
 
-        #log.info("poop in your pants")
+
        
 
 
