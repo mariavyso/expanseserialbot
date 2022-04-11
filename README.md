@@ -1,1 +1,1 @@
-# expanseserialbot
+This is my pet-project, that I made for myself. It works as a telegram-bot. You can add your favourite serial and he tells you when the new episode is come. You can add, delete and watch your list of serials. I used mongo db for save the list and heroku for deploy.
